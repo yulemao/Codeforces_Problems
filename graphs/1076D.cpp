@@ -39,28 +39,28 @@ struct graph {
 		memset(dis, 0x3f, sizeof(dis));
 		
 		dis[1] = 0;
-    
-    	q.push(make_pair(0, 1));
-    
-    	while(!q.empty()){
-    	    x = q.top().second;
-    	    q.pop();
-    	    
-    	    if(vis[x]){
-    	        continue;
-    	    }
-    	    
-    	    vis[x] = true;
-    	    
-    	    for(i=0;i<e[x].size();i++){
-    	        y = e[x][i];
-    	        
-    	        if(dis[y] > dis[x] + w[x][i]){
-    	            dis[y] = dis[x] + w[x][i];
-    	            f[y] = x;
-    	            q.push(make_pair(-dis[y], y));
-    	        }
-    	    }
+	
+		q.push(make_pair(0, 1));
+	
+		while(!q.empty()){
+			x = q.top().second;
+			q.pop();
+			
+			if(vis[x]){
+				continue;
+			}
+			
+			vis[x] = true;
+			
+			for(i=0;i<e[x].size();i++){
+				y = e[x][i];
+				
+				if(dis[y] > dis[x] + w[x][i]){
+					dis[y] = dis[x] + w[x][i];
+					f[y] = x;
+					q.push(make_pair(-dis[y], y));
+				}
+			}
 		}
 		
 		return 0;
