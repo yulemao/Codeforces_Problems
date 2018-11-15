@@ -31,7 +31,7 @@ $(x + i, (y * 10 + i) \space mod \space d)$ 建边 $(0 \leq i \leq 9)$。则从 
 
 使用最短路算法生成一个最短路树，删除叶子节点使得边数小于 $k$ 即可
 
-### Codeforces 1076D The Shortest Statement
+### Codeforces 1051F The Shortest Statement
 
 **(Rating 2300)**
 

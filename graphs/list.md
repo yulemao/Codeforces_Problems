@@ -18,7 +18,7 @@
 
 [http://codeforces.com/problemset/problem/1076/D](http://codeforces.com/problemset/problem/1076/D)
 
-### Codeforces 1076D The Shortest Statement
+### Codeforces 1051F The Shortest Statement
 
 **(Rating 2300)**
 
