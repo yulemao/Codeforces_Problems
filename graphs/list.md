@@ -17,3 +17,9 @@
 **(Rating 1800)**
 
 [http://codeforces.com/problemset/problem/1076/D](http://codeforces.com/problemset/problem/1076/D)
+
+### Codeforces 1076D The Shortest Statement
+
+**(Rating 2300)**
+
+[http://codeforces.com/problemset/problem/1051/F](http://codeforces.com/problemset/problem/1051/F)

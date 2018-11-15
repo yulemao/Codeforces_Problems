@@ -1,4 +1,4 @@
-# Graphs
+Kv# Graphs
 
 ### Codeforces 1070A Find a Number
 
@@ -30,3 +30,13 @@ $(x + i, (y * 10 + i) \space mod \space d)$ 建边 $(0 \leq i \leq 9)$。则从 
 题目大意为给你 $n$ 个点 $m$ 条边的带边权无向图，设每个点到 $1$ 的最短距离为 $d_i$ ，你需要将边删到小于等于 $k$ 个，最大化删除后的图中 $d_i$ 和原图一样的点数
 
 使用最短路算法生成一个最短路树，删除叶子节点使得边数小于 $k$ 即可
+
+### Codeforces 1076D The Shortest Statement
+
+**(Rating 2300)**
+
+[http://codeforces.com/problemset/problem/1051/F](http://codeforces.com/problemset/problem/1051/F)
+
+题目大意为给你 $n$ 个点 $m$ 条边的无向带边权图，$q$ 次询问，求 $x$ 到 $y$ 的最短路，保证 $m - n \leq 20$
+
+对于整个图来说，只有不到 $20$ 个点不在图的一个生成树上。因此对于最短路为树上路径的询问，直接使用树上最短距离例如倍增等算法解决即可。对于其他的路径，一定是最少经过一条不在树上的边，预处理不在树上的边的各个端点到其他所有点的最短路，枚举经过的点即可。
