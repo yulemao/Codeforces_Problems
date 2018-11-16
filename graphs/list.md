@@ -23,3 +23,9 @@
 **(Rating 2300)**
 
 [http://codeforces.com/problemset/problem/1051/F](http://codeforces.com/problemset/problem/1051/F)
+
+### Codeforces 1042F Leaf Sets
+
+**(Rating 2400)**
+
+[http://codeforces.com/problemset/problem/1042/F](http://codeforces.com/problemset/problem/1042/F)
