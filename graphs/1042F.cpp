@@ -46,11 +46,7 @@ struct tree {
 		}
 		
 		if(vec.size() and i == 0){
-			//if(vec[0] + w[x] <= k){
-				w[x] += vec[0];
-			//}else{
-			//	ret++;
-			//}
+			w[x] += vec[0];
 		}
 		
 		w[x]++;
