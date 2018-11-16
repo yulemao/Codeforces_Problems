@@ -50,3 +50,40 @@ $(x + i, (y * 10 + i) \space mod \space d)$ 建边 $(0 \leq i \leq 9)$。则从 
 题目大意为给你一个 $n$ 个节点的树，问你把所有的叶子节点最少分成几个集合，可以使得每个集合中的任意两个叶子节点在树上距离小于 $k$
 
 选取任意一个非叶子节点进行 $DFS$ ，记录每个点中离得最远的叶子节点位置，如果最大的两个加和大于 $k$ ，剪掉就可以了。
+
+### Codeforces 1038E Maximum Matching
+
+**(Rating 2400)**
+
+[http://codeforces.com/problemset/problem/1038/E](http://codeforces.com/problemset/problem/1038/E)
+
+题目大意为给你 $n$ 个块，每个块儿两侧有颜色，中间有权值，每个块儿可以随意反转，但只有相同的颜色才能接到一起。问构造出来权值和最大的串的权值为多少。
+
+#### 题解一
+
+采用 $Floyd$ 的思想，设 $F[l][r][x][y]$ 为区间 $[l, r]$ ，左右颜色分别为 $x$ 和 $y$ 的权值最大值，枚举合并区间的点和颜色，合并即可。
+
+$$f[l][r][x][y] = max(f[l][r][x][y], f[l][i][x][a] + f[i + 1][r][a][y]);$$
+
+$$f[l][r][x][y] = max(f[l][r][x][y], f[i + 1][r][x][a] + f[l][i][a][y]);$$
+
+#### 题解二
+
+Create a graph with $4$ nodes $1−4$
+
+representing the colors. Then the value of a block serves as an edge between the two colors of that block.
+
+Then the question reduces to finding an euler tour in the graph with the maximum sum of edges traveled. An euler tour may not exist with all the given edges, so the question is: Which edges do we remove?
+
+One can note that there are $16$ types of edges. (Edges connecting $1$ to $1$ , $1$ to $2$ and so on). There may be multiple edges of a specific type, however atmost $1$ of it will be removed to form a valid euler tour. This is because if we have $2x+y$ edges between node $A$ and node $B$ where $0 \leq y \leq 1$, we can simply loop back and forth between $A$ and $B$ $x$ times to end up at the node we started from.
+
+Since there are only $16$ types of edges, we can use bitmask to iterate over all the possibilities, and checking whether an euler tour exists in the graph with the marked edges removed (if there are multiple edges between node $A$ and node $B$
+
+, we remove only one edge, the one with the least value).
+
+Refer to author's solution/any AC codes to see implementation details.
+
+Overall Complexity: $O(2 ^ {16} \times n)$
+
+Bonus: Can you solve this question in $O(n ^ 2)$
+? How about $O(n)$?

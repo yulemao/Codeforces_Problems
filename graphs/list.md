@@ -29,3 +29,9 @@
 **(Rating 2400)**
 
 [http://codeforces.com/problemset/problem/1042/F](http://codeforces.com/problemset/problem/1042/F)
+
+### Codeforces 1038E Maximum Matching
+
+**(Rating 2400)**
+
+[http://codeforces.com/problemset/problem/1038/E](http://codeforces.com/problemset/problem/1038/E)
