@@ -35,3 +35,9 @@
 **(Rating 2400)**
 
 [http://codeforces.com/problemset/problem/1038/E](http://codeforces.com/problemset/problem/1038/E)
+
+### Codeforces 1029E Tree with Small Distances
+
+**(Rating 2200)**
+
+[http://codeforces.com/problemset/problem/1029/E](http://codeforces.com/problemset/problem/1029/E)

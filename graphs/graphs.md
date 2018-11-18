@@ -1,4 +1,4 @@
-Kv# Graphs
+# Graphs
 
 ### Codeforces 1070A Find a Number
 
@@ -87,3 +87,13 @@ Overall Complexity: $O(2 ^ {16} \times n)$
 
 Bonus: Can you solve this question in $O(n ^ 2)$
 ? How about $O(n)$?
+
+### Codeforces 1029E Tree with Small Distances
+
+**(Rating 2200)**
+
+[http://codeforces.com/problemset/problem/1029/E](http://codeforces.com/problemset/problem/1029/E)
+
+题目大意为给你一棵根节点为 $1$ 的树，问你最少连多少条边，使得所有点与 $1$ 的最短距离小于 $2$
+
+直接贪心，从下往上走对于每个点，若它有一个儿子与 $1$ 节点的距离大于 $2$ ,那么它就需要和 $1$ 连边，否则不连即可。
